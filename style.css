@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-
 *{
     padding: 0;
     margin: 0; 
@@ -8,20 +7,60 @@
 }
 
 body{
-    background-color: #E5E5E5;
+    /*background-color: #E5E5E5;*/
     /*width: 100vw;*/
     height: 100vh;
 }
-.container_general{
-    width: 100%;
-    height: 100%;
+header{
+    display: flex;
+}
+.logotipo_alura{
+    filter: drop-shadow(0 0 15px #CDE8E5);
+    /*width: 130px;
+    height: 50px;
+    background-color: red;*/
+    padding-top: 15px;
 }
 
-header{ 
+.container_video{
+    height: 100%;
+    position: relative;
 }
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    z-index: -1;
+}
+
+.container_general{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+h1{
+    text-align: center;
+    /*background-color: red;*/
+    display: inline-block;
+    width: 80%;
+    color: #CDE8E5;
+    padding-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #0079FF;
+    font-family: "Inter", sans-serif;
+}
+
 .container_padre{
     display: flex;
-    /*align-items: center;*/
     gap: 3%;
     width: 100%;
     height: 88%;
@@ -36,17 +75,24 @@ header{
     flex-direction: column;
     align-items: center;    
     justify-content: center;
-    background-color: goldenrod;
+    /*background-color: goldenrod;*/
 }
 .ingreso_texto{
     width: 75%;
     border: none;
     resize: none;
-    background-color: yellow;
+    background-color: transparent;
     outline: none;
     font-size: 20px;
     font-family: "Inter", sans-serif;
-    color: #0A3871;
+    color: #EEF7FF;
+    backdrop-filter: blur(11px);  
+    padding: 15px;
+    box-shadow: 0 0 9px inset #CDE8E5;
+    border-radius: 10px;
+}
+.ingreso_texto::placeholder{
+    color: #EEF7FF;
 }
 .alert_1{
     width: 75%;
@@ -59,6 +105,7 @@ header{
     align-items: center;
     font-family: "Inter", sans-serif;
     margin-top: 4px;
+    color: #EEF7FF;
 }
 .parrafo_1 > span{
     font-size: 17px;
@@ -75,52 +122,109 @@ input{
     width: 36%;
     height: 40px;
     border-radius: 15px;
-    color: white;
+    color:  #EEF7FF;
     outline: none;
-    border: 1px solid #0A3871;
+    border: 1px solid #4D869C;
+    font-size: 1.1rem;
 }
 input[value ="Encriptar"]{
-    background-color: #0A3871;
+    background-color: #7AB2B2;
 }
 input[value ="Desencriptar"]{
-    background-color: #D8DFE8;
-    color: #0A3871;
+    background-color:#CDE8E5;
+    color: #4D869C;
 }
 
 .seccion_leer_texto_encriptado{
-    background-color: white;
+    background-color: transparent;
+    /*opacity: .5;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 32px;
+    box-shadow: 0 0 10px inset #CDE8E5;
     width: 22%;
     padding: 20px;
     text-align: center;
-    background-color: greenyellow;
+    backdrop-filter: blur(11px);
 }
-img{
+
+.contenedor_seccion_mensajes{
+    width:100%;
+    height: 70%;
+    
+}
+.contenedor_seccion_mensajes>h2,p{
+    text-align: center;
+}
+.contenedor_seccion_mensajes>p{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+.muñeco_seccion2{
     margin-top: 15px;
+    width: 270px;
 }
 .parrafo_2{
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: bold;
+    color: #EEF7FF;
 }
 .parrafo_3{
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #495057;
+    color: #EEF7FF;
+}
+.respuesta_boton_encriptar{
+    display: none;
+    flex-direction: column;
+    gap:8px;
+    width: 100%;
+    padding: 8px;
+}
+
+.respuesta_boton_encriptar > textarea{
+    resize: none;
+    outline: none;
+    overflow: auto;
+    padding: 10px;
+    font-size: .9rem;
+    font-family: "Inter", sans-serif;
+    color: #EEF7FF;
+    font-weight: 600;
+    border-radius: 15px;
+    opacity: .5;
+    background-color: #7AB2B2;
+}
+.respuesta_boton_encriptar>input{
+    width: 100%;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding:10px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    background-color: #7AB2B2;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.94);
+    color: #EEF7FF;
+}
+.respuesta_boton_encriptar >input:hover{
+    background-color: #7AB2B2;
 }
 footer{
     display: flex;
     align-items: center;
-    background-color: red;
+    /*background-color: red;*/
     padding: 1.4px;
+    color: #EEF7FF;
+    filter: drop-shadow(0 0 15px #DFF5FF);
 }
 marquee{
     font-family: "Inter", sans-serif;
-    text-transform: uppercase;   
+    /*-transform: uppercase; */  
+    font-style: oblique;
 }
 
 @media (max-width:768px) {

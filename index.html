@@ -8,40 +8,45 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <div class="container_general">
-        <header>
-            <img src="imagenes/Logo.png" alt="Logo De Alura Latam">
-        </header>
-        <main class="container_padre">
-            <div class="seccion_ingresar_texto">
-                <textarea class="ingreso_texto" rows="50" cols="120" placeholder="Ingresar el texto aqui"></textarea>
-                <div class="alert_1">
-                    <p class="parrafo_1"><span class="material-symbols-outlined">
-                        error
-                        </span>Solo letras minúsculas y sin acentos</p>
-                </div>
-                <div class="seccion_botones">
-                    <input type="button" value="Encriptar">
-                    <input type="button" value="Desencriptar" disabled>
-                </div>
-            </div>
-            <div class="seccion_leer_texto_encriptado">
-            <!--<textarea class="texto_encriptado" name="" id=""></textarea>-->
-                <img src="imagenes/Muñeco.png" alt="muñeco__encriptador">
-                <div class="cuando_no_hay_texto">
-                    <div class="primer_aviso">
-                        <p class="parrafo_2">Ningun texto encontrado</p>
+    <div class="container_video">
+        <div class="container_general"> 
+            <header>
+                <img class="logotipo_alura" src="imagenes/Logo.png" alt="Logo De Alura Latam">
+                <h1>Encriptador de texto</h1>
+            </header>
+            <main class="container_padre">
+                
+                <div class="seccion_ingresar_texto">
+                    <textarea required class="ingreso_texto" id="txtMensaje" rows="50" cols="120" placeholder="Ingresar el texto aqui"></textarea>
+                    <div class="alert_1">
+                        <p class="parrafo_1"><span class="material-symbols-outlined">
+                            error
+                            </span>Solo letras minúsculas y sin acentos</p>
                     </div>
-                    <div class="alert_2">
-                        <p class="parrafo_3">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    <div class="seccion_botones">
+                        <input type="button" id="encriptar" value="Encriptar">
+                        <input type="button" id="desencriptar" value="Desencriptar" disabled>
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer>
-            <marquee behavior="scroll" direction="right" scrollamount="15">Diego Rodrigo Guerreo Laban</marquee>
-        </footer>
-    </div>
+                <div class="seccion_leer_texto_encriptado">
+                <!--<textarea class="texto_encriptado" name="" id=""></textarea>-->
+                        <div class="contenedor_seccion_mensajes">
+                            <img class="muñeco_seccion2" src="imagenes/Muñeco.png" alt="muñeco__encriptador">
+                            <h2 class="parrafo_2">Ningun texto encontrado</h2>
+                            <p class="parrafo_3">Ingresa el texto que deseas encriptar o desencriptar</p>
+                        </div>
+                        <div class="respuesta_boton_encriptar">
+                            <textarea name="respuesta" cols="30" rows="30" readonly id="txtRespuesta"></textarea>
+                            <input type="button" id="copiar" value="Copiar">
+                        </div>
+                </div>
+            </main>
+            <footer>
+                <marquee behavior="scroll" direction="right" scrollamount="15">Autor: Diego Rodrigo Guerrero Laban</marquee>
+            </footer>
+        </div>
+        <video src="/video/tecnology01.mp4 " muted loop autoplay></video>
+        </div>
     <script src="app.js"></script>
 </body>
 </html>
