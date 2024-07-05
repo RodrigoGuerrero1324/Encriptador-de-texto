@@ -13,6 +13,18 @@ body{
 }
 header{
     display: flex;
+    /*background-color: red;*/
+}
+.redes_sociales{
+    display: flex;
+    gap: 10px;
+}
+.linkedin,.github{  
+    /*padding: 2px 15px;*/
+    padding-top: 15px;
+    align-content: center;
+    font-size: 40px;
+    color: #CDE8E5;
 }
 .logotipo_alura{
     filter: drop-shadow(0 0 15px #CDE8E5);
@@ -49,7 +61,7 @@ h1{
     text-align: center;
     /*background-color: red;*/
     display: inline-block;
-    width: 80%;
+    width: 70%;
     color: #CDE8E5;
     padding-top: 20px;
     text-transform: uppercase;
@@ -85,14 +97,14 @@ h1{
     outline: none;
     font-size: 20px;
     font-family: "Inter", sans-serif;
-    color: #EEF7FF;
+    color: #EBF4F6;
     backdrop-filter: blur(11px);  
     padding: 15px;
-    box-shadow: 0 0 9px inset #CDE8E5;
+    box-shadow: 0 0 9px inset #003366;
     border-radius: 10px;
 }
 .ingreso_texto::placeholder{
-    color: #EEF7FF;
+    color: #EBF4F6;
 }
 .alert_1{
     width: 75%;
@@ -105,7 +117,7 @@ h1{
     align-items: center;
     font-family: "Inter", sans-serif;
     margin-top: 4px;
-    color: #EEF7FF;
+    color: #EBF4F6;
 }
 .parrafo_1 > span{
     font-size: 17px;
@@ -122,13 +134,13 @@ input{
     width: 36%;
     height: 40px;
     border-radius: 15px;
-    color:  #EEF7FF;
+    color:  #003366;
     outline: none;
-    border: 1px solid #4D869C;
+    border: 1px solid #00A1E0;    
     font-size: 1.1rem;
 }
 input[value ="Encriptar"]{
-    background-color: #7AB2B2;
+    background-color: #D3D3D3;
 }
 input[value ="Desencriptar"]{
     background-color:#CDE8E5;
@@ -142,7 +154,7 @@ input[value ="Desencriptar"]{
     flex-direction: column;
     justify-content: center;
     border-radius: 32px;
-    box-shadow: 0 0 10px inset #CDE8E5;
+    box-shadow: 0 0 10px inset #003366;
     width: 22%;
     padding: 20px;
     text-align: center;
@@ -163,13 +175,13 @@ input[value ="Desencriptar"]{
 }
 .muñeco_seccion2{
     margin-top: 15px;
-    width: 270px;
+    width: 90%;
 }
 .parrafo_2{
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    color: #EEF7FF;
+    color: #EBF4F6;
 }
 .parrafo_3{
     font-family: "Inter", sans-serif;
@@ -192,10 +204,10 @@ input[value ="Desencriptar"]{
     padding: 10px;
     font-size: .9rem;
     font-family: "Inter", sans-serif;
-    color: #EEF7FF;
+    color: #EBF4F6;
     font-weight: 600;
     border-radius: 15px;
-    opacity: .5;
+    opacity: .8;
     background-color: #7AB2B2;
 }
 .respuesta_boton_encriptar>input{
@@ -208,7 +220,7 @@ input[value ="Desencriptar"]{
     background-color: #7AB2B2;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.94);
-    color: #EEF7FF;
+    color: #EBF4F6;
 }
 .respuesta_boton_encriptar >input:hover{
     background-color: #7AB2B2;
@@ -218,47 +230,145 @@ footer{
     align-items: center;
     /*background-color: red;*/
     padding: 1.4px;
-    color: #EEF7FF;
-    filter: drop-shadow(0 0 15px #DFF5FF);
+    color: #EBF4F6;
+    /*filter: drop-shadow(0 0 15px #DFF5FF);*/
 }
 marquee{
     font-family: "Inter", sans-serif;
     /*-transform: uppercase; */  
     font-style: oblique;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #4B70F5;
+    white-space: nowrap;
 }
 
-@media (max-width:768px) {
-    .container_padre{
-        display: flex;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container_video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container_general {
+        width: 100%;
+    }
+
+    .container_padre {
         flex-direction: column;
-        background-color: aquamarine;
-        height: 92%;
+        width: 100%;
+        height: 91%;
         padding: 5px;
     }
-    .seccion_ingresar_texto{
+
+    .seccion_ingresar_texto {
+        justify-content: center;
         width: 100%;
-        height: 88%;
-        padding: 0;
+        height: 70%;
+        /*padding: 0 ;*/
+        /*background-color: red;*/
     }
-    .ingreso_texto{
+
+    .ingreso_texto {
+        width: 90%;
+        height: auto; /* Ajuste la altura automáticamente */
+        /*background-color: transparent;*/
+        border-radius: 8px; 
+        font-size: 20px;
+        font-family: "Inter", sans-serif;
+        /*padding: 10px;*/
+        color: #EBF4F6;
+        backdrop-filter: blur(11px);  
+        box-shadow: 0 0 9px inset #003366;
+        border-radius: 10px;
+    }
+
+    .alert_1{
+        font-size: .8rem;
+        display: flex;
+        width: 90%;
+        gap: 5px;
+        font-family: "Inter", sans-serif;
+        margin-top: 4px;
+        color: #EBF4F6;
+        /*background-color: red;*/
+    }
+    .seccion_botones input {
+        width: 36%;
+        height: 40px;
+        border-radius: 15px;
+        color:  #003366;
+        outline: none;
+        border: 1px solid #00A1E0;    
+        font-size: 1.1rem;
+    }
+    .seccion_botones {
+        justify-content: space-around;
         width: 100%;
-        height: 80%;
-    }
-    .seccion_leer_texto_encriptado> img{
-        display: none;
-    }
-    .seccion_leer_texto_encriptado{
-        width: 100%;
+        height: 7%; /* Ajuste la altura automáticamente */
+        padding: 0 5px;
+        align-items: center;
+        background-color: transparent;
+        /*background-color: yellow;*/
     }
     input{
-        width: 50%;
-        font-size: 25px;
-        padding: 10px;
+        width: 36%;
+        height: 40px;
+        border-radius: 15px;
+        color:  #003366;
+        outline: none;
+        border: 1px solid #00A1E0;    
+        font-size: 1.1rem;
     }
-    .seccion_botones{
+    input[value ="Encriptar"]{
+        background-color: #D3D3D3;
+    }
+    input[value ="Desencriptar"]{
+        background-color:#CDE8E5;
+        color: #4D869C;
+    }
+    .seccion_leer_texto_encriptado {
+        width: 90%;
+        margin: 10px auto;
+        justify-content: center;
+        align-items: center;
+        height: 25%; 
+        color: #333333;
+        text-align: center;
+        border-radius: 32px;
+        box-shadow: 0 0 10px inset #003366;
+        /*background-color: green;*/
+    }
+
+    .contenedor_seccion_mensajes {
+        /*padding: 15px;*/
+        align-content: center;
+    }
+
+    .contenedor_seccion_mensajes > .muñeco_seccion2 {
+        display: none;
+    }
+    .parrafo_2{
+        font-family: 'Inter', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #EBF4F6;
+    }
+    .parrafo_3{
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #EEF7FF;
+    }
+
+    .respuesta_boton_encriptar {
+        height: 100%;
+    }
+
+    .respuesta_boton_encriptar > .text_seccion2,
+    #copiar {
         width: 100%;
-        height: 7%;
-        padding: 0 25px;
-        background-color: aqua;
     }
 }
+@media only screen and (min-width: 360px) and (max-width: 932px){
+
+}
+

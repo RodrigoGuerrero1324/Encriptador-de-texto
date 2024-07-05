@@ -13,9 +13,12 @@
             <header>
                 <img class="logotipo_alura" src="imagenes/Logo.png" alt="Logo De Alura Latam">
                 <h1>Encriptador de texto</h1>
+                <div class="redes_sociales">
+                <a class="linkedin" href="https://linkedin.com/in/diego-guerrero-laban" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a class="github" href="https://github.com/RodrigoGuerrero1324" target="_blank" ><ion-icon name="logo-github"></ion-icon></a>
+                </div>
             </header>
             <main class="container_padre">
-                
                 <div class="seccion_ingresar_texto">
                     <textarea required class="ingreso_texto" id="txtMensaje" rows="50" cols="120" placeholder="Ingresar el texto aqui"></textarea>
                     <div class="alert_1">
@@ -29,24 +32,25 @@
                     </div>
                 </div>
                 <div class="seccion_leer_texto_encriptado">
-                <!--<textarea class="texto_encriptado" name="" id=""></textarea>-->
                         <div class="contenedor_seccion_mensajes">
                             <img class="muñeco_seccion2" src="imagenes/Muñeco.png" alt="muñeco__encriptador">
                             <h2 class="parrafo_2">Ningun texto encontrado</h2>
                             <p class="parrafo_3">Ingresa el texto que deseas encriptar o desencriptar</p>
                         </div>
                         <div class="respuesta_boton_encriptar">
-                            <textarea name="respuesta" cols="30" rows="30" readonly id="txtRespuesta"></textarea>
+                            <textarea class="txt_seccion2" name="respuesta" cols="30" rows="30" readonly id="txtRespuesta"></textarea>
                             <input type="button" id="copiar" value="Copiar">
                         </div>
                 </div>
             </main>
             <footer>
-                <marquee behavior="scroll" direction="right" scrollamount="15">Autor: Diego Rodrigo Guerrero Laban</marquee>
+                <marquee behavior="scroll" direction="right" scrollamount="5">Autor: Diego Rodrigo Guerrero Laban</marquee>
             </footer>
         </div>
         <video src="/video/tecnology01.mp4 " muted loop autoplay></video>
         </div>
     <script src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
