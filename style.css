@@ -1,164 +1,151 @@
+/* Importa la fuente "Inter" de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* Estilos generales para todos los elementos */
 *{
     padding: 0;
     margin: 0; 
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el total del ancho y alto */
 }
-
 body{
-    /*background-color: #E5E5E5;*/
-    /*width: 100vw;*/
-    height: 100vh;
+    height: 100vh;/* Ocupa toda la altura de la ventana */
 }
 header{
-    display: flex;
-    /*background-color: red;*/
+    display: flex;/* Flexbox para el layout del encabezado */
 }
 .redes_sociales{
-    display: flex;
-    gap: 10px;
+    display: flex;/* Flexbox para el layout de los iconos de redes sociales */
+    gap: 10px;/* Espacio entre los iconos */
 }
 .linkedin,.github{  
-    /*padding: 2px 15px;*/
-    padding-top: 15px;
-    align-content: center;
-    font-size: 40px;
-    color: #CDE8E5;
+    padding-top: 15px;/* Espaciado superior */
+    align-content: center;/*Alinea el contenido al centro*/
+    font-size: 40px;/* Tamaño de la fuente de los iconos */
+    color: #CDE8E5;/* Color de los iconos */
 }
 .logotipo_alura{
-    filter: drop-shadow(0 0 15px #CDE8E5);
-    /*width: 130px;
-    height: 50px;
-    background-color: red;*/
-    padding-top: 15px;
+    filter: drop-shadow(0 0 15px #CDE8E5);/* Sombra del logotipo */
+    padding-top: 15px;/* Espaciado superior */
 }
-
 .container_video{
-    height: 100%;
-    position: relative;
+    height: 100%;/* Ocupa toda la altura del contenedor */
+    position: relative;/* Para posicionar el video y el contenido superpuesto */
 }
-
 video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    z-index: -1;
+    position: absolute;/* Posiciona el video detrás del contenido */
+    top: 0;/*Inicia el div del video en la parte superior de la vetana*/
+    left: 0;/*Inicia el div del video en la parte izquierda de la vetana*/
+    width: 100%;/*Un ancho del 100% con respecto al ancho de la ventana*/
+    height: 100%;/*Un alto del 100% con respecto al alto de la ventana*/
+    object-fit:fill;/* Ajusta el video para cubrir el área */
+    z-index: -1;/* Envía el video al fondo */
 }
-
 .container_general{
-    position: absolute;
+    position: absolute;/* Superpone el contenedor general sobre el video */
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 2;/* Asegura que el contenido esté delante del video */
 }
 h1{
-    text-align: center;
-    /*background-color: red;*/
+    text-align: center;/* Centra el texto */
     display: inline-block;
     width: 70%;
-    color: #CDE8E5;
-    padding-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: 600;
-    text-shadow: 0 0 10px #0079FF;
-    font-family: "Inter", sans-serif;
+    color: #CDE8E5;/* Color del texto */
+    padding-top: 20px;/* Espaciado superior */
+    text-transform: uppercase;/* Convierte el texto a mayúsculas */
+    letter-spacing: 5px;/* Espacio entre letras */
+    font-weight: 600;/* Grosor de la fuente */
+    text-shadow: 0 0 10px #0079FF;/* Sombra del texto */
+    font-family: "Inter", sans-serif;/* Fuente del texto */
 }
-
 .container_padre{
-    display: flex;
-    gap: 3%;
+    display: flex;/* Flexbox para el layout principal */
+    gap: 3%;/* Espacio entre los elementos */
     width: 100%;
     height: 88%;
-    padding-left: 3%;
+    padding-left: 3%;/* Espaciado izquierdo */
 }
-
 .seccion_ingresar_texto{
     width: 65%;
     height: 100%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    justify-content: center;
-    /*background-color: goldenrod;*/
+    padding: 2%;/* Espaciado interno */
+    display: flex;/* Flexbox para el layout de la sección */
+    flex-direction: column;/*Acomoda el contenido en columnas*/
+    align-items: center;/*Indica la alineación de un elemento dentro del bloque, en este caso en el centro*/    
+    justify-content: center;/*Espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
 }
 .ingreso_texto{
     width: 75%;
-    border: none;
-    resize: none;
-    background-color: transparent;
-    outline: none;
-    font-size: 20px;
-    font-family: "Inter", sans-serif;
+    border: none;/*Sin borde*/
+    resize: none;/*controlar la capacidad de cambio de tamaño de un elemento*/
+    background-color: transparent;/*Color de fondo transparente*/
+    outline: none;/*Sin propiedades de contorno*/
+    font-size: 20px;/*Tamaño de la fuente del texto*/
+    font-family: "Inter", sans-serif;/*Fuente de texto*/
     color: #EBF4F6;
-    backdrop-filter: blur(11px);  
+    backdrop-filter: blur(11px);/* Filtro de desenfoque */  
     padding: 15px;
-    box-shadow: 0 0 9px inset #003366;
-    border-radius: 10px;
+    box-shadow: 0 0 9px inset #003366;/* Sombra interna */
+    border-radius: 10px; /* Bordes redondeados */
 }
 .ingreso_texto::placeholder{
-    color: #EBF4F6;
+    color: #EBF4F6;/* Color del texto del placeholder */
 }
 .alert_1{
     width: 75%;
-    text-align: left;
+    text-align: left;/* Alineación del texto */
 }
 .parrafo_1{
-    font-size: .8rem;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    font-family: "Inter", sans-serif;
+    font-size: .8rem;/* Tamaño de la fuente */
+    display: flex;/* Flexbox para el layout del párrafo */
+    gap: 5px;/* Espacio entre los elementos */
+    align-items: center;/*Indica la alineación de un elemento dentro del bloque, en este caso en el centro*/
+    font-family: "Inter", sans-serif;/*Fuente de texto*/
     margin-top: 4px;
     color: #EBF4F6;
 }
 .parrafo_1 > span{
-    font-size: 17px;
+    font-size: 17px;/* Tamaño de la fuente del icono */
 }
 .seccion_botones{
     width: 75%;
-    margin-top: 5px;
+    margin-top: 5px;/* Espaciado del margen superior */
     padding: 5px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    display: flex;/* Flexbox para el layout de los botones */
+    justify-content: center;/*Espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
+    gap: 40px;/* Espacio entre los elementos */
 }
 input{
     width: 36%;
     height: 40px;
-    border-radius: 15px;
+    border-radius: 15px; /* Bordes redondeados */
     color:  #003366;
-    outline: none;
-    border: 1px solid #00A1E0;    
-    font-size: 1.1rem;
+    outline: none;/*Sin propiedades de contorno*/
+    border: 1px solid #00A1E0; /* Borde(tamaño; tipo de borde; color del borde) */
+    font-size: 1.1rem;/* Borde */
 }
 input[value ="Encriptar"]{
-    background-color: #D3D3D3;
+    background-color: #D3D3D3;/* Color de fondo del botón "Encriptar" */
+    cursor: pointer; /*Tipo de cursor que se mostrara cuando este se encuentre sobre un elemento*/
 }
 input[value ="Desencriptar"]{
-    background-color:#CDE8E5;
-    color: #4D869C;
+    background-color:#CDE8E5;/* Color de fondo del botón "Desencriptar" */
+    color: #4D869C;/* Color del texto del botón "Desencriptar" */
+    cursor: pointer; /*Tipo de cursor que se mostrara cuando este se encuentre sobre un elemento*/
 }
-
 .seccion_leer_texto_encriptado{
     background-color: transparent;
-    /*opacity: .5;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 32px;
-    box-shadow: 0 0 10px inset #003366;
+    display: flex;/* Flexbox para el layout de la sección */
+    flex-direction: column;/*Acomoda el contenido en columnas*/
+    justify-content: center;/*Espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
+    border-radius: 32px;/* Bordes redondeados */
+    box-shadow: 0 0 10px inset #003366;/* Sombra interna */
     width: 22%;
     padding: 20px;
-    text-align: center;
-    backdrop-filter: blur(11px);
+    text-align: center;/* Alineación del texto */
+    backdrop-filter: blur(11px);/* Filtro de desenfoque */ 
 }
 
 .contenedor_seccion_mensajes{
@@ -167,47 +154,47 @@ input[value ="Desencriptar"]{
     
 }
 .contenedor_seccion_mensajes>h2,p{
-    text-align: center;
+    text-align: center;/* Alineación del texto */
 }
 .contenedor_seccion_mensajes>p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-family: "Inter", sans-serif;/*Fuente del texto*/
+    font-weight: 400;/* Grosor de la fuente */
 }
 .muñeco_seccion2{
     margin-top: 15px;
     width: 90%;
 }
 .parrafo_2{
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;/*Tipo de fuente*/
+    font-size: 24px;/*Tamaño de la fuente*/
+    font-weight: bold;/* Grosor de la fuente */
     color: #EBF4F6;
 }
 .parrafo_3{
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: "Inter", sans-serif;/*Tipo de fuente*/
+    font-size: 16px;/*Tamaño de la fuente*/
+    font-weight: 400;/* Grosor de la fuente */
     color: #EEF7FF;
 }
 .respuesta_boton_encriptar{
-    display: none;
-    flex-direction: column;
-    gap:8px;
+    display: none;/* Flexbox para el layout de la sección */
+    flex-direction: column;/*Acomoda el contenido en columnas*/
+    gap:8px;/* Espacio entre los elementos */
     width: 100%;
     padding: 8px;
 }
 
 .respuesta_boton_encriptar > textarea{
-    resize: none;
-    outline: none;
-    overflow: auto;
+    resize: none;/*controlar la capacidad de cambio de tamaño de un elemento*/
+    outline: none;/*Sin propiedades de contorno*/
+    overflow: auto;/*Dibuja barras de desplazamiento*/
     padding: 10px;
     font-size: .9rem;
     font-family: "Inter", sans-serif;
     color: #EBF4F6;
     font-weight: 600;
     border-radius: 15px;
-    opacity: .8;
+    opacity: .8;/*Opacidad del bloque*/
     background-color: #7AB2B2;
 }
 .respuesta_boton_encriptar>input{
@@ -216,30 +203,27 @@ input[value ="Desencriptar"]{
     font-size: 1.1rem;
     padding:10px;
     font-family: "Inter", sans-serif;
-    cursor: pointer;
+    cursor: pointer; /*Tipo de cursor que se mostrara cuando este se encuentre sobre un elemento*/
     background-color: #7AB2B2;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.94);
+    outline: none;/*Sin propiedades de contorno*/
+    border: 1px solid rgba(0, 0, 0, 0.94);/*Borde (tamaño; tipo;color)*/
     color: #EBF4F6;
 }
 .respuesta_boton_encriptar >input:hover{
-    background-color: #7AB2B2;
+    background-color: #7AB2B2;/* Color de fondo al pasar sobre el botón */
 }
 footer{
-    display: flex;
-    align-items: center;
-    /*background-color: red;*/
+    display: flex;/* Flexbox para el layout del pie de página */
+    align-items: center;/* Alinea verticalmente los elementos */
     padding: 1.4px;
     color: #EBF4F6;
-    /*filter: drop-shadow(0 0 15px #DFF5FF);*/
 }
 marquee{
-    font-family: "Inter", sans-serif;
-    /*-transform: uppercase; */  
-    font-style: oblique;
+    font-family: "Inter", sans-serif;  
+    font-style: oblique;/* Estilo de fuente oblicua */
     font-size: 14px;
-    text-shadow: 1px 1px 2px #4B70F5;
-    white-space: nowrap;
+    text-shadow: 1px 1px 2px #4B70F5;/* Sombra del texto */
+    white-space: nowrap;/* Impide que el texto se rompa en varias líneas */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -254,23 +238,18 @@ marquee{
         flex-direction: column;
         width: 100%;
         height: 87%;
-        /*padding: 10px;*/
     }
     .seccion_ingresar_texto {
         justify-content: center;
         width: 100%;
         height: 70%;
-        /*padding: 0 ;*/
-        /*background-color: red;*/
     }
     .ingreso_texto {
         width: 90%;
-        height: auto; /* Ajuste la altura automáticamente */
-        /*background-color: transparent;*/
+        height: auto;
         border-radius: 8px; 
         font-size: 20px;
         font-family: "Inter", sans-serif;
-        /*padding: 10px;*/
         color: #EBF4F6;
         backdrop-filter: blur(11px);  
         box-shadow: 0 0 9px inset #003366;
@@ -284,7 +263,6 @@ marquee{
         font-family: "Inter", sans-serif;
         margin-top: 4px;
         color: #EBF4F6;
-        /*background-color: red;*/
     } 
     .seccion_botones input {
         width: 36%;
@@ -298,11 +276,10 @@ marquee{
     .seccion_botones {
         justify-content: space-around;
         width: 100%;
-        height: 7%; /* Ajuste la altura automáticamente */
+        height: 7%; 
         padding: 0 5px;
         align-items: center;
         background-color: transparent;
-        /*background-color: yellow;*/
     }
     .seccion_leer_texto_encriptado {
         width: 90%;
@@ -314,10 +291,8 @@ marquee{
         text-align: center;
         border-radius: 32px;
         box-shadow: 0 0 10px inset #003366;
-        /*background-color: green;*/
     }
     .contenedor_seccion_mensajes {
-        /*padding: 15px;*/
         align-content: center;
     }
     .contenedor_seccion_mensajes > .muñeco_seccion2 {
@@ -342,8 +317,12 @@ marquee{
     #copiar {
         width: 100%;
     }
+    footer{
+        width: 100%;
+        margin-top: 5px;
+    }
     .pie_pagina{
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 }
 
@@ -351,13 +330,10 @@ marquee{
     .container_video {
         max-width: 100%;
         height: 100%;
-        /*background-color: red;*/
     }
     .container_general {
         width: 100%;
         height: 95%;
-        /*padding: 12px;*/
-        /*background-color: red;*/
     }
     .container_padre {  
         display: flex;
@@ -366,8 +342,6 @@ marquee{
         width: 100%;
         height: 80%;
         padding: 12px;
-        /*background-color: red;*/
-        /*padding: 10px;*/
     }
     header{
         width: 100%;
@@ -375,13 +349,10 @@ marquee{
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*padding: 0 auto;*/
-        /*margin: 0;*/
     }
     .logotipo_alura{
-        /*filter: drop-shadow(0px 0px 15px white);*/
         filter:contrast(400%);
-        width: 15%;
+        width: 10%;
         height: 26%;
         padding: 15px 0 10px 0;
         margin: 0;
@@ -390,12 +361,8 @@ marquee{
         width: 50%;
         padding: 5px;
         align-content: center;
-        /*align-items: center;
-        text-align: center;*/
-        /*background-color: red;*/
-        /*display: inline-block;*/
         font-size: 1.5rem;
-        letter-spacing: 2px;
+        letter-spacing: 2px;/* Espacio entre letras */
     }
     .redes_sociales{
         display: flex;
@@ -404,19 +371,15 @@ marquee{
     .linkedin,.github{
         font-size: 2rem;
         align-content: center;
-        /*background-color: green;*/
         padding: 0%;
     }
     .seccion_ingresar_texto{
         width: 100%;
         height: 70%;
         margin: 0;
-        /*background-color: green;*/
     }
     .ingreso_texto{
         width: 100%;
-        /*margin-right: 12px;*/
-        /*margin: 0 auto;*/
     } 
     .alert_1{
         width: 100%;
@@ -426,7 +389,6 @@ marquee{
         display: flex;
         flex-direction: column;
         gap: 6px;
-        /*background-color: green;*/
     }
     #encriptar,#desencriptar{
         width: 100%;
@@ -435,7 +397,6 @@ marquee{
     .seccion_leer_texto_encriptado{
         width: 100%;
         height: 30%;
-        /*background-color: #00A1E0;*/
     }
     .contenedor_seccion_mensajes{
         align-content: center;
@@ -444,11 +405,9 @@ marquee{
         display: none;
     }
     .respuesta_boton_encriptar{
-        /*width: 100%;*/
         height: 100%;
     }
     footer{
-        /*background-color: yellow;*/
         width: 100%;
         margin-top: 5px;
     }

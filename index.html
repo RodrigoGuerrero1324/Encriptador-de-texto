@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos para la configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
+     <!-- Enlace a la hoja de estilos CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Enlace a la fuente de iconos de Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+    <!-- Contenedor principal, en donde se encuentra toda la base para la pagina web -->
     <div class="container_video">
+        <!-- Contenedor general para el contenido principal -->
         <div class="container_general"> 
+            <!--Cabecero de la pagina web, donde se encuentra el titulo de la pagina, el logotipo ALURA y las redes sociales del autor -->
             <header>
+                <!-- Logotipo de ALURA LATAM -->
                 <img class="logotipo_alura" src="imagenes/Logo.png" alt="Logo De Alura Latam">
+                <!-- Título principal -->
                 <h1>Encriptador de texto</h1>
+                <!--Enlaces a redes sociales mediante iconos-->
                 <div class="redes_sociales">
+                <!--Link al Linkedin del autor-->
                 <a class="linkedin" href="https://linkedin.com/in/diego-guerrero-laban" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <!--Link al GitHub del autor-->
                 <a class="github" href="https://github.com/RodrigoGuerrero1324" target="_blank" ><ion-icon name="logo-github"></ion-icon></a>
                 </div>
             </header>
+            <!--Seccion donde se encuentra la parte de interaccion con el usuario(Donde ingres y lee los textos que desea encriptar o desencriptar)-->
             <main class="container_padre">
+                <!-- Sección para ingresar texto -->
                 <div class="seccion_ingresar_texto">
+                    <!--Cuadro para ingresar texto-->
                     <textarea required class="ingreso_texto" id="txtMensaje" rows="50" cols="120" placeholder="Ingresar el texto aqui"></textarea>
+                    <!--Sugerencia para el ingreso de texto -->
                     <div class="alert_1">
                         <p class="parrafo_1"><span class="material-symbols-outlined">
                             error
                             </span>Solo letras minúsculas y sin acentos</p>
                     </div>
+                    <!--Seccion de los botones que realizan la funcionalidad de encriptacion o desencriptacion-->
                     <div class="seccion_botones">
+                        <!--Boton de encriptacion-->
                         <input type="button" id="encriptar" value="Encriptar">
+                        <!--Boton de desencriptacion-->
                         <input type="button" id="desencriptar" value="Desencriptar" disabled>
                     </div>
                 </div>
+                <!-- Sección para mostrar el texto encriptado o desencriptado -->
                 <div class="seccion_leer_texto_encriptado">
+                    <!--Seccion donde se mostraran mensajes cuando el usuario no ingrese un texto a encriptar o desencriptar-->
                         <div class="contenedor_seccion_mensajes">
+                            <!--Imagen de sugerencia para cuando el usuario no ingrese texto-->
                             <img class="muñeco_seccion2" src="imagenes/Muñeco.png" alt="muñeco__encriptador">
+                            <!--Primer aviso para el no ingreso de texto-->
                             <h2 class="parrafo_2">Ningun texto encontrado</h2>
+                            <!--Segundo aviso para el no ingreso de texto-->
                             <p class="parrafo_3">Ingresa el texto que deseas encriptar o desencriptar</p>
                         </div>
+                        <!--Funcionalidad para la encriptacion o desencriptacion-->
                         <div class="respuesta_boton_encriptar">
+                            <!--Seccion de visualizacion del texto encriptado o desencriptado-->
                             <textarea class="txt_seccion2" name="respuesta" cols="30" rows="30" readonly id="txtRespuesta"></textarea>
+                            <!--Boton para copiar el texto encriptado o desencriptado-->
                             <input type="button" id="copiar" value="Copiar">
                         </div>
                 </div>
             </main>
+            <!-- Pie de página con el nombre del autor -->
             <footer>
                 <marquee class="pie_pagina" behavior="scroll" direction="right" scrollamount="5">Autor: Diego Rodrigo Guerrero Laban</marquee>
             </footer>
         </div>
+        <<!--Video que fondo animado de la pagina web-->
         <video class="video_fondo" src="/video/tecnology01.mp4 " muted loop autoplay></video>
     </div>
+    <!-- Seccion de Scripts para el uso de iconos y la funcionaldiad JS -->
     <script src="app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
