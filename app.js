@@ -3,6 +3,8 @@ const desencriptar = document.getElementById('desencriptar');
 const copiar =  document.getElementById('copiar');
 const txtmensaje =  document.getElementById('txtMensaje');
 const txtrespuesta = document.getElementById('txtRespuesta');
+//const textArea = document.queryselector(".ingreso_texto");//
+//const mensaje = document.queryselector(".txt_seccion2");//
 
 function activarRespuesta() {
   // Oculta el primer elemento con la clase 'img_mensaje'
@@ -25,29 +27,60 @@ if (respuestaBoton) respuestaBoton.style.display = 'none';
 }
 
 function onEncriptar() {
-let contenido = txtmensaje.value;
-if(contenido != ''){
-    txtrespuesta.value  = contenido;
+  let contenido;
+  if(txtmensaje.value != ''){
+    contenido = encriptarAction(txtmensaje.value);
+    txtrespuesta.value = contenido;
+    txtmensaje.value ="";
     activarRespuesta();
+  }
 }
+
+
+function encriptarAction(stringEncriptado) {
+  let matrizCodigo=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+  stringEncriptado = stringEncriptado.toLowerCase();
+  
+  for(let i =0;i<matrizCodigo.length;i++){
+    if(stringEncriptado.includes(matrizCodigo[i][0])){ 
+    stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1]);
+    }
+  }
+  return stringEncriptado;
 }
+
 
 function onDesencriptar() {
-let contenido = txtmensaje.value;
-if(contenido != ''){
-    txtrespuesta.value  = contenido;
+let contenidoDesencriptar;
+if(contenidoDesencriptar != ''){
+    contenidoDesencriptar = desencriptarAction(txtmensaje.value);
+    txtrespuesta.value  = contenidoDesencriptar;
+    txtmensaje.value="";
     activarRespuesta();
 }
 }
 
+function desencriptarAction(stringDesencriptado) {
+  let matrizCodigo=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+  stringDesencriptado = stringDesencriptado.toLowerCase();
+  
+  for(let i =0;i<matrizCodigo.length;i++){
+    if(stringDesencriptado.includes(matrizCodigo[i][1])){ 
+    stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0]);
+    }
+  }
+  return stringDesencriptado
+}  
+
 function onCopiar(){
-let contenido  = txtmensaje.value;
-if(contenido != ''){
-    activarImagen();
-}
-}
+  let contenido  = txtmensaje.value;
+  if(contenido != ''){
+      activarImagen();
+  }
+  }
 
 // AGREGANDO EVENTOS A LOS BOTONES.
 encriptar.addEventListener('click', onEncriptar);
 desencriptar.addEventListener('click', onDesencriptar);
 copiar.addEventListener('click',activarImagen);
+
