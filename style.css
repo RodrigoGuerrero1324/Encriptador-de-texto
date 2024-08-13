@@ -29,7 +29,7 @@ header{
 }
 /*Logotipo de ALura latam*/
 .logotipo_alura{
-    filter: drop-shadow(0 0 15px #CDE8E5);/* Sombra del logotipo */
+    filter: brightness(150%) drop-shadow(0 0 15px #8f9796);/*Sombra del logotipo*/
     padding-top: 15px;/* Espaciado superior */
 }
 /*Div que contiene al video de fondo*/
@@ -155,6 +155,15 @@ input[value ="Desencriptar"]{
     color: #4D869C;/* Color del texto del botón "Desencriptar" */
     cursor: pointer; /*Tipo de cursor que se mostrara cuando este se encuentre sobre un elemento*/
 }
+input[value ="Encriptar"]:hover{
+    background-color: #928bb788;
+    color: wheat;
+}
+input[value ="Desencriptar"]:hover{
+    background-color: #47dcca55;
+    color: wheat;
+}
+
 /*Div que contiene al texto encriptado o desencriptado*/
 .seccion_leer_texto_encriptado{
     background-color: transparent;
