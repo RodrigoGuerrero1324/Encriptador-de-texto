@@ -51,7 +51,7 @@ function encriptarAction(stringEncriptado) {
 
 
 function onDesencriptar() {
-let contenidoDesencriptar;
+let contenidoDesencriptar = txtmensaje.value;
 if(contenidoDesencriptar != ''){
     contenidoDesencriptar = desencriptarAction(txtmensaje.value);
     txtrespuesta.value  = contenidoDesencriptar;
